@@ -1,0 +1,22 @@
+## Build Directories
+# Visual Studio Build
+msvc201*/
+x64-*/
+x86-*/
+Win32-*/
+.vs/
+
+CMakeSettings.json
+#CLion
+cmake-build-debug/
+cmake-build-release/
+.idea/
+
+## CMake Ignore Files
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Makefile
+cmake_install.cmake
+install_manifest.txt
+CTestTestfile.cmake

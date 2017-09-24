@@ -1,0 +1,196 @@
+QMainWindow
+{
+	color: #BFBFBF;
+	background-color: #444444;
+}
+QWidget
+{
+	color: #BFBFBF;
+	background-color: #444444;
+}
+QWidget:item:hover
+{
+    background-color: #5285A6;
+    color: #FFFFFF;
+}
+/*------------------------MenuBar Menu----------------------------------------*/
+QMenuBar::item
+{
+    color: #FFFFFF;
+    background: transparent;
+}
+
+QMenuBar::item:selected
+{
+    background: #5285A6;
+    /*border: 1px solid #5285A6;*/
+}
+
+QMenuBar::item:pressed
+{
+    background: #444;
+    border: 1px solid #000;
+    background-color: #5285A6;
+    margin-bottom:-1px;
+    padding-bottom:1px;
+}
+QMenu::item:selected
+{
+    color: #FFFFFF;
+    background-color: #5285A6;
+}
+QMenu::item:hover
+{
+    color: #5285A6;
+}
+/*------------------------ComboBox----------------------------------------*/
+QComboBox {
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 1px 18px 1px 3px;
+    min-width: 6em;
+}
+QComboBox:hover
+{
+	background: #5285A6;
+}
+
+QComboBox:editable {
+    background: #646464;
+}
+QComboBox:!editable {
+     background: #444444;
+}
+/* QComboBox gets the "on" state when the popup is open */
+QComboBox:!editable:on {
+    background: #646464;
+}
+QComboBox:on { /* shift the text when the popup opens */
+    padding-top: 3px;
+    padding-left: 4px;
+}
+QComboBox::down-arrow {
+    image: url(:/icons/dropArrow.png);
+}
+QComboBox::down-arrow:on { /* shift the arrow when popup is open */
+    top: 1px;
+    left: 1px;
+}
+/*Drop down*/
+QComboBox::drop-down,
+QComboBox::drop-down:hover,
+QComboBox::drop-down:on {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+    border-left-style: solid;
+    border-left-color: #646464;
+    border-left-width: 1px;
+}
+QComboBox QAbstractItemView {
+    selection-background-color: #5285A6;
+	outline:none;
+}
+/*---------------------------------------------------------*/
+QPushButton
+{
+    border: 1px solid gray;
+    border-radius: 3px;
+	min-width: 4em;
+	min-height: 2em;
+}
+QPushButton:hover
+{
+    background-color: #646464;
+}
+QPushButton:pressed{
+    
+    background-color: #5285A6;
+}
+/*---------------------------------------------------------*/
+/* Customize spin boxes. */
+
+QSpinBox {
+    background-color: #646464;
+}
+
+QSpinBox::up-button {
+    image: url(:/icons/arrowUp.png);
+    background-color: #444444;
+}
+
+QSpinBox::up-button:hover {
+    border-image: url(:/images/spinup_hover.png) 1;
+    background-color: #545454;
+}
+
+QSpinBox::up-button:pressed {
+    border-image: url(:/images/spinup_pressed.png) 1;
+    background-color: #646464;
+}
+
+QSpinBox::down-button {
+    image: url(:/icons/arrowDown.png);
+    background-color: #444444;
+}
+
+QSpinBox::down-button:hover {
+    border-image: url(:/images/spindown_hover.png) 1;
+    background-color: #545454;
+}
+
+QSpinBox::down-button:pressed {
+    border-image: url(:/images/spindown_pressed.png) 1;
+    background-color: #646464;
+}
+/*-------------------------------------------------------------*/
+QDockWidget {
+    border: 1px solid;
+}
+
+QDockWidget::title {
+	color: #FFFFFF;
+    text-align: left; /* align the text to the left */
+    background: #444444;
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+QDockWidget::close-button, QDockWidget::float-button {
+	color: #646464;
+    border: 1px solid #646464;
+    background: #444444;
+}
+/*-------------------------------------------------------------*/
+QTabWidget
+{
+	border: 1px transparent black;
+}
+QTabWidget::pane { /* The tab widget frame */
+}
+
+
+QTabWidget::tab-bar {
+   /* left: 5px; /* move to the right by 5px */
+}
+/* Style the tab using the tab sub-control. Note that
+    it reads QTabBar _not_ QTabWidget */
+
+QTabBar::tab {
+    background: #363636;
+    border: 1px transparent black;
+    border-bottom-color: #C2C7CB; /* same as the pane color */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    min-width: 18ex;
+    padding: 3px;
+}
+
+QTabBar::tab:selected, QTabBar::tab:hover {
+	color: #EEEEEE;
+    background: #6D6D6D;
+}
+
+QTabBar::tab:!selected {
+   /* margin-top: 2px; /* make non-selected tabs look smaller */
+	background: #363636;
+}
